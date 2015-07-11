@@ -11,7 +11,7 @@ RSpec.describe Article, type: :model do
     expect(article.valid?).to eq(false)
   end
 
-  it "creates article without title" do
+  it "does not creates article without title" do
     article = build(:article, title: nil)
     expect(article.valid?).to eq(false)
   end

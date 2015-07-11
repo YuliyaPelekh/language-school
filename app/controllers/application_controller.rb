@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
     render text: '', layout: true
   end
 
+  private
+
+  def check_authentification
+    head :forbidden unless user_signed_in?
+  end
 end

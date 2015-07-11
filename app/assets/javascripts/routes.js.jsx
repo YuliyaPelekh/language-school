@@ -20,7 +20,7 @@ var Router = (
    <Route path='/articles/new' name='new_article' handler={NewArticle} />
    <Route path='/articles/:articleId' name='article' handler={Article} />
    <Route path='/articles/:articleId/edit' name='edit_article' handler={EditArticle} />
-   
+
    <Route path='/pages' name='pages' handler={Pages} />
    <Route path='/pages/new' name='new_page' handler={NewPage} />
    <Route path='/pages/:pageId' name='page' handler={Page} />
