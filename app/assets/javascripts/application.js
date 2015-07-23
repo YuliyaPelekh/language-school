@@ -22,6 +22,7 @@
 //= require react_router_ujs
 //= require underscore
 //= require backbone
+//= require bootbox
 //= require app
 //= require_tree ./models
 //= require_tree ./collections
