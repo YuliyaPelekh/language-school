@@ -30,5 +30,11 @@ var Router = (
     <Route name='eventNew' handler={EventNew} path="/events/new" />
     <Route name='event' handler={Event} path="/events/:eventId" />
     <Route name='eventEdit' handler={EventEdit} path="/events/:eventId/edit" />
+
+    <Route name='books' handler={Books} path='/books' />
+    <Route name='bookNew' handler={BookNew} path='/books/new' />
+    <Route name='book'  handler={Book}  path="/books/:bookId"  />
+    <Route name='bookEdit' handler={BookEdit} path='/books/:bookId/edit' />
+
   </Route>
  );

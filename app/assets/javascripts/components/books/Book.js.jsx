@@ -1,5 +1,4 @@
 var Book = React.createClass({
-
   getInitialState: function () {
     return {
       book: []
