@@ -16,7 +16,7 @@ var Navbar = React.createClass({
  },
   render: function() {
     var items = this.state.data.map(function(menu) {
-    return (        
+    return (
       <li>
         <a key={menu.id} href={menu.url}>{menu.name}</a>
      </li>
@@ -38,12 +38,10 @@ var Navbar = React.createClass({
               {items}
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a href='#'>Log In <span className="glyphicon glyphicon-log-in"></span></a>
-              </li>
-              <li>
-                <a href='#'>Sign Up <span className="glyphicon glyphicon-user"></span></a>
-              </li>
+              <ul className="nav navbar-nav navbar-right">
+                {this.props.isSignedIn ? <SignOutLink /> : <SignInLink />}
+                {this.props.isSignedIn ? false : <SignUpLink />}
+            </ul>
             </ul>
           </div>
         </div>

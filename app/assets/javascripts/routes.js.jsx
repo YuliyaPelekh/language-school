@@ -20,7 +20,7 @@ var Router = (
    <Route path='/articles/new' name='new_article' handler={NewArticle} />
    <Route path='/articles/:articleId' name='article' handler={Article} />
    <Route path='/articles/:articleId/edit' name='edit_article' handler={EditArticle} />
-   
+
    <Route path='/pages' name='pages' handler={Pages} />
    <Route path='/pages/new' name='new_page' handler={NewPage} />
    <Route path='/pages/:pageId' name='page' handler={Page} />
@@ -30,5 +30,8 @@ var Router = (
     <Route name='eventNew' handler={EventNew} path="/events/new" />
     <Route name='event' handler={Event} path="/events/:eventId" />
     <Route name='eventEdit' handler={EventEdit} path="/events/:eventId/edit" />
+
+    <Route path='/users/sign_up' name='sign_up' handler={SignUp} />
+    <Route path='/users/sign_in' name='sign_in' handler={SignIn} />
   </Route>
  );
