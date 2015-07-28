@@ -39,8 +39,10 @@ var Navbar = React.createClass({
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <ul className="nav navbar-nav navbar-right">
-                {this.props.isSignedIn ? <SignOutLink /> : <SignInLink />}
-                {this.props.isSignedIn ? false : <SignUpLink />}
+              <li><p>{this.props.notice}</p></li>
+              <li><p>{this.props.alert}</p></li>
+              {this.props.isSignedIn ? <SignOutLink /> : <SignInLink />}
+              {this.props.isSignedIn ? false : <SignUpLink />}
             </ul>
             </ul>
           </div>
