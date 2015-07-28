@@ -14,16 +14,11 @@ class Api::V1::BooksController < ApplicationController
   end
 
   
-  def edit
-    @book = Book.find(params[:id])
-  end
-
-  
   def create
     @book = Book.new(book_params)
     if @book.save
-       # render json: @book
-      redirect_to "#/books"
+     render json: @book
+      #redirect_to "#/books"
     else
       head :unprocessable_entity
     end

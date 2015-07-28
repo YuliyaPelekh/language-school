@@ -3,13 +3,13 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    # "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-    "uploads/book/attachment/#{model.id}"
+     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    #"uploads/book/attachment/#{model.id}"
   end
 
   
-  def extension_white_list
-    %w(pdf doc docx odt)
-  end
+  # def extension_white_list
+  #   %w(pdf doc docx odt)
+  # end
 
 end

@@ -80,9 +80,25 @@ var BookDescription = React.createClass({
 
 var BookAttachment = React.createClass({
   render: function() {
-    attach = this.props.attachment;
+
+    // var extras = { };
+     var attach = this.props.attachment;
+    // debugger;
+    // var attachm = String(attach.url);
+    // if (this.props.attachment) { extras.href = attachm; }
+    //var attach = this.props.attachment;
+    // attach.prototype.toString = function attToString() {
+    //   var ret = this.url;
+    // };
+    // var attachm = String(attach);
+    //var attachm = JSON.stringify(attach);
+    //var attachm = String.valueOf(attach);
+    //attachm.toString();
+    //var att=JSON.stringify(attachm);
     return (
-       <a href="/uploads/book/attachment/3/book1.odt">{this.props.attachment}{this.props.children}</a>
+       // <Link {this.props.attachment}>{this.props.attachment}{this.props.children}</Link>
+       //<p>{attachm}</p>
+       <a href= { this.props.attachment } >{this.props.attachment}{this.props.children}</a>
     );
   }
 });
@@ -110,3 +126,4 @@ var ToBookEdit = React.createClass({
    );
   }
 });
+

@@ -7,7 +7,7 @@ var BookEdit = React.createClass({
 
   componentDidMount: function() {
     var id = this.props.params.bookId,
-        book = new Bb.Models.Book({id: id});
+    book = new Bb.Models.Book({id: id});
     book.fetch({
       success: function(model) {
         this.setState({

@@ -15,6 +15,11 @@ var BookForm = React.createClass({
 
   handleFormSubmit: function(e) {
     e.preventDefault();
+    var form = document.querySelector("form");
+    var MyForm = new FormData(form);
+    var oReq = new XMLHttpRequest();
+    oReq.open("POST", "/api/v1/books", true);
+    oReq.send(MyForm);
     var title = React.findDOMNode(this.refs.title).value.trim();
     var description = React.findDOMNode(this.refs.description).value.trim();
     var attachment = React.findDOMNode(this.refs.attachment).value.trim();
@@ -39,7 +44,7 @@ var BookForm = React.createClass({
   // },
   render: function() {
     return (
-      <form role="form" encType="multipart/form-data" action="/api/v1/books" method="POST" >
+      <form name = "infoform" role="form" encType="multipart/form-data" onSubmit={this.handleFormSubmit}>
         <div className="col-md-6">
           <div className="form-group">
             <label for="title">Title</label>
