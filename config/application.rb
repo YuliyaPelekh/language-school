@@ -18,5 +18,6 @@ module LanguageSchool
 
     config.active_record.raise_in_transactional_callbacks = true
     config.react.addons = true
+    config.browserify_rails.commandline_options = "-t reactify --extension=\".js.jsx\""
   end
 end

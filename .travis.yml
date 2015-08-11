@@ -3,11 +3,14 @@ rvm:
   - 2.2.2
 env:
   - DB=postgresql
+before_script:
+  - rake db:test:drop
+  - rake db:test:create
+  - rake db:test:migrate
+  - npm install
 script:
-  - bundle exec rake db:drop RAILS_ENV=test
-  - bundle exec rake db:create RAILS_ENV=test
-  - bundle exec rake db:migrate RAILS_ENV=test
   - bundle exec rspec
+  - npm test
 addons:
   code_climate:
     repo_token:
